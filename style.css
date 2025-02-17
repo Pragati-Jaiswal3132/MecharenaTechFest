@@ -1,0 +1,310 @@
+/* 
+====================================
+  Global Styles
+====================================
+*/
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Bungee+Spice&family=Faculty+Glyphic&family=Playwrite+AU+NSW:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Wet+Paint&family=Sedan+SC&family=Tapestry&display=swap');
+
+
+
+/* Reset and universal box sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Full viewport width control */
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Body styling */
+body {
+  height: 100%;
+  text-align: center;
+}
+
+/* 
+====================================
+  Header Section
+====================================
+*/
+
+/* Header container */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  background-color: #353434;
+  color: white;
+  flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+/* Logo styling */
+.logo {
+  height: 80px;
+  width: auto;
+  margin: 10px;
+  border-radius: 50%;
+}
+
+/* Title styling */
+.title-text {
+  text-align: center;
+}
+
+.title-text p{
+  font-family: "Playwrite AU NSW", serif;
+}
+
+h1 {
+  font-family: "Bona Nova SC", serif;
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+/* Utility classes */
+.white {
+  color: #fff;
+}
+
+.b600 {
+  font-weight: 600;
+}
+
+/* Subtitle styling */
+.sub-title {
+  font-family: "Tapestry", serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #ddd;
+  padding: 10px;
+  background-color: #222;
+}
+
+/* 
+====================================
+  Navigation Bar
+====================================
+*/
+
+/* Navbar container */
+.navbar {
+  animation: fadeInUp 1.5s ease-out;
+  background-color: #444;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Navbar list */
+.navbar ul {
+  display: flex;
+  flex-wrap: wrap; /* Ensures elements wrap if they overflow */
+  justify-content: center;
+  width: 100%;
+  padding: 0;
+  list-style: none; /* Fix: Remove default bullet points */
+  align-items: center;
+}
+
+/* Navbar list items */
+.navbar ul li {
+  display: inline-block;
+}
+
+/* Navbar links */
+.navbar ul li a {
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 5px 10px;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Navbar hover effect */
+.navbar ul li a:hover {
+  color: yellow;
+}
+
+/* 
+====================================
+  Hero Section
+====================================
+*/
+
+/* Hero section background */
+.hero {
+  animation: fadeInUp 1.5s ease-out;
+  background: url("background.webp") center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  
+}
+
+.hero h1{
+  font-family: "Rubik Wet Paint", serif;
+  /*font-family: "Bungee Spice", serif;*/
+  font-style: normal;
+  letter-spacing: 6px;
+  font-weight: 100;
+  font-style: normal;
+
+}
+
+
+/* Dark overlay to enhance readability */
+.overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  width: 90%;
+  max-width: 600px;
+}
+
+/* Hero tagline */
+.tagline {
+  font-family: "Playwrite AU NSW", serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+/* Event date animation */
+.event-date {
+  font-size: 2rem;
+  font-weight: 700;
+  color: yellow;
+  animation: pulse 1.5s infinite;
+}
+
+/* Pulse animation for event date */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.7;
+    color: orange;
+  }
+}
+
+/* Fade-in effect */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 
+====================================
+  Buttons
+====================================
+*/
+
+/* Common button styles */
+.btn, .trans-btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 20px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Primary button */
+.btn {
+  background-color: yellow;
+  color: black;
+}
+
+/* Primary button hover effect */
+.btn:hover {
+  background-color: orange;
+}
+
+/* Transparent button */
+.trans-btn {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+/* Transparent button hover effect */
+.trans-btn:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Social media button hover effect */
+.sm:hover {
+  background-color: rgb(9, 53, 246);
+}
+
+/* 
+====================================
+  Responsive Design
+====================================
+*/
+
+/* Tablet and mobile responsiveness */
+@media (max-width: 768px) {
+  /* Keeping the existing alignments & spacing intact */
+  .header-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 0px;
+  }
+
+  .title-text h1 {
+    font-size: 1rem;
+  }
+
+  .title-text p {
+    font-size: 0.5rem;
+  }
+
+  .sub-title {
+    font-size: 0.5rem;
+  }
+
+  .logo {
+    height: 30px;
+  }
+
+  .hero {
+    height: auto;
+    padding: 50px 0;
+  }
+
+  .tagline{
+    font-size: 1.3rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .event-date {
+    font-size: 1.8rem;
+  }
+}

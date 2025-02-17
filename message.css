@@ -1,0 +1,159 @@
+/* 
+====================================
+  Global Styles for Page 
+====================================
+*/
+
+/* General body styling */
+body {
+  background: linear-gradient(135deg, #2c2c2c, #4b2e1e);  /* Gradient background */
+  color: white;  /* Text color for contrast */
+  font-family: "Poppins", sans-serif;  /* Clean, modern font */
+  margin: 0;
+  padding: 0;
+  line-height: 1.5rem;  /* Improves readability */
+}
+
+/* 
+====================================
+  Main Layout 
+====================================
+*/
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;  /* Fixed invalid padding value */
+  margin: 13px;
+  width: 100%;
+  flex-direction: column;  /* Ensures content is stacked properly */
+}
+
+/* 
+====================================
+  Event Card Styling 
+====================================
+*/
+
+.event-card {
+  background: rgba(107, 255, 1, 0.05);  /* Subtle background color */
+  padding: 15px;  /* More padding for spacing */
+  border-radius: 10px;  /* Smooth rounded corners */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);  /* Soft shadow effect */
+  transition: transform 0.3s ease-in-out, background 0.3s ease;
+}
+
+/* Hover effect for event card */
+.event-card:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Event card heading */
+.event-card h3 {
+  font-family: "Bona Nova SC", serif;
+  letter-spacing: 3px;
+  margin-top: 15px;
+  font-size: 3rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* 
+====================================
+  Event Container 
+====================================
+*/
+
+/* Event container for structured layout */
+.event-container {
+  width: 80%;
+  max-width: 900px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  flex-direction: row;  /* Default horizontal layout */
+  margin: 5%;
+}
+
+/* 
+====================================
+  Message Image Styling 
+====================================
+*/
+
+.msg-image img {
+  width: 150px;
+  height: auto;
+  border-radius: 50%;
+  border: rgba(165, 42, 42, 0.5) 5px solid;  /* More readable border color */
+  box-shadow: 0 0 15px rgba(206, 40, 40, 0.5);  /* Improved box shadow */
+}
+
+/* 
+====================================
+  Event Content 
+====================================
+*/
+
+.event-content {
+  margin-left: 20px;  /* Provides spacing between image and text */
+}
+
+/* Event heading with styled shadow */
+.event-content h2 {
+  font-family: "Sedan SC", serif;
+  color: #ffcc00;
+  text-shadow: 
+    2px 2px 5px black, 
+    -1px -1px 5px black, 
+    1px -1px 5px black, 
+    -1px 1px 5px black, 
+    1px 1px 5px black;
+}
+
+/* Date text styling */
+.date {
+  font-family: "Faculty Glyphic", serif;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 10px 0;
+  text-align: center;
+}
+
+/* Informational text */
+.info {
+  padding: 10px 5px;
+  text-align: justify;
+}
+
+/* 
+====================================
+  Responsive Design 
+====================================
+*/
+
+/* Tablet and smaller screens */
+@media (max-width: 768px) {
+  .event-container {
+    flex-direction: column;  /* Stack image and content vertically */
+    padding: 15px;
+    width: 90%;  /* Adjust width for smaller screens */
+  }
+
+  .event-content {
+    margin-left: 0;  /* Remove left margin */
+  }
+
+  .event-content h2 {
+    font-size: 1.5em;  /* Adjust heading size */
+  }
+}

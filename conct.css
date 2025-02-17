@@ -1,0 +1,118 @@
+/* 
+===========================
+  Global Styles for Page 
+===========================
+*/
+
+/* General body styling */
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #1b1b1b, #4e342e); /* Dark gradient background */
+  color: white; /* Ensures readability */
+  margin: 0;
+  padding: 0;
+  text-align: center;
+
+}
+
+/* 
+===========================
+  Contact Section Styling 
+===========================
+*/
+
+/* Contact container */
+.contact-container {
+  
+  max-width: 600px; /* Restricting width for better readability */
+  margin: 50px auto; /* Centering the contact container */
+  padding: 20px;
+  background: rgba(165, 42, 42, 0.25); /* Semi-transparent brownish background */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.1); /* Soft shadow effect */
+}
+
+/* 
+===========================
+  Heading Styles
+===========================
+*/
+
+/* Main heading */
+main h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: yellow; /* Highlighting the heading */
+}
+
+/* 
+===========================
+  Contact Card Styles
+===========================
+*/
+
+/* Individual contact card */
+.contact-card {
+  animation: fadeInUp 1.5s ease-out; /* Applying smooth fade-in animation */
+  background: rgba(255, 255, 255, 0.1); /* Light overlay effect */
+  padding: 15px;
+  border-radius: 10px; /* Rounded edges */
+  margin: 15px 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition effects */
+}
+
+/* Hover effect on contact card */
+.contact-card:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3); /* Glow effect */
+}
+
+/* 
+===========================
+  Contact Details Styling 
+===========================
+*/
+
+/* Paragraph text inside the contact section */
+p {
+  margin: 8px 0;
+  font-size: 18px;
+}
+
+/* 
+===========================
+  Email Link Styling 
+===========================
+*/
+
+/* Email link */
+.email a {
+  color: yellow;
+  word-wrap: break-word; /* Prevents overflow of long email addresses */
+  font-weight: bold;
+  text-decoration: none;
+  transition: text-decoration 0.2s ease-in-out;
+}
+
+/* Hover effect for email link */
+.email a:hover {
+  text-decoration: underline; /* Underline effect on hover */
+}
+
+/* 
+===========================
+  Keyframe Animations 
+===========================
+*/
+
+/* Fade-in animation for elements */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

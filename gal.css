@@ -1,0 +1,93 @@
+/* 
+====================================
+  Global Styles for Page 
+====================================
+*/
+
+/* General body styling */
+body {
+  font-family: "Poppins", sans-serif;  /* Sets modern, clean font */
+  background-color: #181818;  /* Dark background for contrast */
+  color: white;  /* Ensures text is readable */
+  text-align: center;  /* Centers text content */
+  margin: 0;
+  padding: 0;
+  line-height: 1.5rem;  /* Improves readability */
+}
+
+/* 
+====================================
+  Gallery Section 
+====================================
+*/
+
+/* Gallery container for spacing */
+.gallery-container {
+  padding: 20px;  /* Adds padding around the gallery */
+}
+
+/* 
+   Responsive gallery grid:
+   - Uses auto-fit to automatically adjust column count
+   - Minimum item width: 250px, ensuring responsiveness
+   - Maximum: 1fr (fills available space)
+*/
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));  
+  gap: 15px;  /* Adds spacing between images */
+  max-width: 90%;  /* Ensures gallery is within view */
+  margin: auto;  /* Centers the gallery */
+}
+
+/* 
+====================================
+  Gallery Item Styling 
+====================================
+*/
+
+/* Individual gallery item container */
+.gallery-item {
+  overflow: hidden;  /* Ensures images don't exceed boundaries */
+  border-radius: 10px;  /* Rounded corners for smooth design */
+  transition: transform 0.3s ease-in-out;  /* Smooth transition effect */
+}
+
+/* Styling for images inside the gallery */
+.gallery-item img {
+  animation: fadeInUp 1.5s ease-out;  /* Smooth fade-in effect */
+  width: 100%;  /* Ensures images fill their container */
+  height: auto;  /* Maintains aspect ratio */
+  display: block;  /* Prevents extra spacing issues */
+  border-radius: 10px;  /* Matches container's rounded edges */
+  transition: transform 0.3s ease-in-out;  /* Smooth hover effect */
+}
+
+/* 
+====================================
+  Hover Effects 
+====================================
+*/
+
+/* Scale effect when hovering over an image */
+.gallery-item:hover img {
+  transform: scale(1.1);  /* Slight zoom effect */
+}
+
+/* 
+====================================
+  Animation Keyframes 
+====================================
+*/
+
+/* Fade-in animation for images */
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(30px);  /* Moves image up */
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);  /* Returns image to normal position */
+  }
+}

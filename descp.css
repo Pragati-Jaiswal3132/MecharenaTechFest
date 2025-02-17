@@ -1,0 +1,209 @@
+/* 
+====================================
+  Global Styles for Page 
+====================================
+*/
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Bungee+Spice&family=Faculty+Glyphic&family=Playwrite+AU+NSW:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Wet+Paint&family=Sedan+SC&family=Tapestry&display=swap');
+
+
+/* General body styling */
+body {
+  background: linear-gradient(135deg, #2c2c2c, #4b2e1e); /* Dark gradient background */
+  color: white; /* Ensures readability */
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5rem; /* Improved readability */
+}
+
+/* 
+====================================
+  Main Section Styling 
+====================================
+*/
+
+/* Main container to center the content */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+/* 
+====================================
+  Event Section Styling
+====================================
+*/
+
+/* Event container for layout and design */
+.event-container {
+  animation: fadeInUp 1.5s ease-out; /* Smooth fade-in animation */
+  display: flex;
+  max-width: 900px; /* Restricting width for better layout */
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+  padding: 20px;
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2); /* Soft glow effect */
+  backdrop-filter: blur(10px); /* Adds a blur effect to the background */
+  flex-direction: row; /* Default: side-by-side layout */
+}
+
+/* Styling for event image */
+.event-image img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* Styling for speaker or special message image */
+.msg-image img {
+  width: 300px;
+  height: auto;
+  border-radius: 50%; /* Circular image */
+  border: #fa7e01 5px solid; /* Orange border */
+}
+
+/* 
+====================================
+  Event Content Styling
+====================================
+*/
+
+/* Content container beside the event image */
+.event-content {
+  margin-left: 20px;
+}
+
+/* Event title styling */
+.event-content h2 {
+  font-family: "Sedan SC", serif;
+  letter-spacing: 1px;
+  color: #ffcc00; /* Gold text color */
+  text-shadow: 
+    2px 2px 5px black, 
+    -1px -1px 5px black, 
+    1px -1px 5px black,
+    -1px 1px 5px black, 
+    1px 1px 5px black; /* 3D shadow effect for text */
+}
+
+/* Styling for event date and location */
+.date {
+  font-family: "Faculty Glyphic", serif;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 10px 0;
+  text-align: center;
+}
+
+/* Information text block */
+.info {
+  padding: 10px 5px;
+  text-align: justify;
+}
+
+/* Hashtag styling */
+.tags {
+  padding: 10px 5px;
+  text-align: center;
+  color: yellow; /* Highlighting hashtags */
+}
+
+/* 
+====================================
+  Navigation Button Styling
+====================================
+*/
+
+/* Footer button container */
+.fbtn {
+  animation: fadeInUp 1.5s ease-out; /* Smooth fade-in effect */
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* Responsive button grid */
+  gap: 5%;
+  padding: 10px;
+  margin: auto;
+  max-width: 500px; /* Restrict width for layout balance */
+}
+
+/* Footer button styling */
+.fbtn a {
+  margin: auto;
+  text-align: center;
+  text-decoration: none;
+  padding: 8px;
+  background: #ff6600; /* Orange button */
+  color: white;
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s ease-in-out; /* Smooth hover transition */
+  max-width: 50px;
+}
+
+/* Hover effect for footer buttons */
+.fbtn a:hover {
+  background: black; /* Change to black on hover */
+}
+
+/* 
+====================================
+  Responsive Design (Mobile & Tablet)
+====================================
+*/
+
+/* Media query for screens below 768px */
+@media (max-width: 768px) {
+  /* Mobile-friendly event container */
+  .event-container {
+    flex-direction: column; /* Stack elements vertically */
+    padding: 15px;
+  }
+
+  /* Responsive event image */
+  .event-image img {
+    width: 100%; /* Full width */
+    height: auto;
+    margin-bottom: 20px; /* Space below the image */
+  }
+
+  /* Remove left margin for better alignment */
+  .event-content {
+    margin-left: 0;
+  }
+
+  /* Adjust event title size for smaller screens */
+  .event-content h2 {
+    font-size: 1.5em;
+  }
+
+  /* Full-width buttons on smaller screens */
+  .btn, .next-event-btn {
+    width: 100%;
+    padding: 15px 0;
+    font-size: 1.1em;
+  }
+}
+
+/* 
+====================================
+  Animations 
+====================================
+*/
+
+/* Fade-in animation for smooth UI transitions */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
