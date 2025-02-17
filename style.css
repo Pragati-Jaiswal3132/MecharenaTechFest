@@ -38,6 +38,7 @@ body {
 /* Header container */
 .header-container {
   display: flex;
+  line-height: 3em;
   align-items: center;
   justify-content: center;
   padding: 10px 20px;
@@ -269,6 +270,7 @@ h1 {
 @media (max-width: 768px) {
   /* Keeping the existing alignments & spacing intact */
   .header-container {
+    line-height: normal;
     display: flex;
     justify-content: center;
     text-align: center;
